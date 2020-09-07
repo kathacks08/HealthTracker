@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QM4-k0-Fgj">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard-->
+        <scene sceneID="s26-eM-RB8">
+            <objects>
+                <viewController id="Gxw-WR-IPt" customClass="ViewController" customModule="Health_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TEc-uv-DEL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUc-wX-gRf">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Dashboard" id="Css-lf-S5F"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Explore Healthy Habits" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Ot-sL-1NV">
+                                <rect key="frame" x="20" y="98" width="290" height="46"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="IXH-w6-dkp"/>
+                                    <constraint firstAttribute="height" constant="46" id="d4a-cp-BrJ"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Mxm-Ae-Chc">
+                                <rect key="frame" x="25" y="154" width="325" height="538"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="h4m-GB-WKO" userLabel="Top View">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="150"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzM-Um-wZV">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="26j-tC-1V4"/>
+                                                    <constraint firstAttribute="width" constant="150" id="qBh-sA-0Qg"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="food.jpg"/>
+                                                <connections>
+                                                    <action selector="food:" destination="Gxw-WR-IPt" eventType="touchUpInside" id="pJs-gg-oru"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCb-zF-RU9">
+                                                <rect key="frame" x="176" y="0.0" width="149" height="150"/>
+                                                <state key="normal" backgroundImage="studytips.jpg"/>
+                                                <connections>
+                                                    <action selector="studytips:" destination="Gxw-WR-IPt" eventType="touchUpInside" id="z4W-FG-Xs0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="uhU-uY-xj4" userLabel="Middle View">
+                                        <rect key="frame" x="0.0" y="194" width="325" height="150"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhG-LC-CAe">
+                                                <rect key="frame" x="0.0" y="0.0" width="149" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="3M6-Ix-jz4"/>
+                                                    <constraint firstAttribute="width" constant="150" id="PES-CU-EhZ"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="UOU-eD-h6n"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="sI1-T3-4Kh"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="fitness.jpg"/>
+                                                <connections>
+                                                    <action selector="fitness:" destination="Gxw-WR-IPt" eventType="touchUpInside" id="Nlk-LW-l3K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLi-Ig-tQc">
+                                                <rect key="frame" x="175" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="apb-PP-sNI"/>
+                                                    <constraint firstAttribute="height" constant="150" id="c5q-7V-Cvk"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="gAF-eg-gsx"/>
+                                                    <constraint firstAttribute="width" constant="150" id="qaX-Wg-hdq"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="headphones.jpg"/>
+                                                <connections>
+                                                    <action selector="music:" destination="Gxw-WR-IPt" eventType="touchUpInside" id="xnF-bK-oGz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="lqf-Vi-Zc4" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="388" width="325" height="150"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpg-qI-9FB">
+                                                <rect key="frame" x="0.0" y="0.0" width="149" height="150"/>
+                                                <state key="normal" backgroundImage="meditation.jpg"/>
+                                                <connections>
+                                                    <action selector="mind:" destination="Gxw-WR-IPt" eventType="touchUpInside" id="ySh-QN-wZj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO3-5f-ioL">
+                                                <rect key="frame" x="175" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="KhO-kx-g2R"/>
+                                                    <constraint firstAttribute="height" constant="150" id="fSa-cr-pna"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="zoom.jpeg"/>
+                                                <connections>
+                                                    <action selector="stayConnected:" destination="Gxw-WR-IPt" eventType="touchUpInside" id="7yM-Fr-PGr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uhU-uY-xj4" firstAttribute="top" secondItem="h4m-GB-WKO" secondAttribute="bottom" constant="40" id="Zhv-PT-m65"/>
+                                    <constraint firstItem="uhU-uY-xj4" firstAttribute="top" secondItem="h4m-GB-WKO" secondAttribute="bottom" constant="40" id="qlj-gp-5Xn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sUc-wX-gRf" firstAttribute="leading" secondItem="TEc-uv-DEL" secondAttribute="leading" id="0sB-9H-etd"/>
+                            <constraint firstAttribute="trailing" secondItem="sUc-wX-gRf" secondAttribute="trailing" id="880-He-WiC"/>
+                            <constraint firstItem="Mxm-Ae-Chc" firstAttribute="top" secondItem="8Ot-sL-1NV" secondAttribute="bottom" constant="10" id="Hi9-9e-ord"/>
+                            <constraint firstItem="8Ot-sL-1NV" firstAttribute="leading" secondItem="WkC-UJ-u1m" secondAttribute="leading" constant="20" id="Jzc-Sc-wCX"/>
+                            <constraint firstItem="sUc-wX-gRf" firstAttribute="top" secondItem="WkC-UJ-u1m" secondAttribute="top" id="Ws2-RU-k0G"/>
+                            <constraint firstItem="WkC-UJ-u1m" firstAttribute="trailing" secondItem="Mxm-Ae-Chc" secondAttribute="trailing" constant="25" id="WvE-Xn-rIJ"/>
+                            <constraint firstItem="Mxm-Ae-Chc" firstAttribute="leading" secondItem="WkC-UJ-u1m" secondAttribute="leading" constant="25" id="fzm-c6-QAu"/>
+                            <constraint firstItem="8Ot-sL-1NV" firstAttribute="top" secondItem="sUc-wX-gRf" secondAttribute="bottom" constant="10" id="sjT-q7-Ge5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WkC-UJ-u1m"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" selectedImage="house.fill" id="pUi-kV-Bp3">
+                        <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="fitness" destination="KhG-LC-CAe" id="fvp-4e-jWu"/>
+                        <outlet property="food" destination="mzM-Um-wZV" id="4sg-ju-0K3"/>
+                        <outlet property="mind" destination="Fpg-qI-9FB" id="zgm-4K-MR1"/>
+                        <outlet property="music" destination="DLi-Ig-tQc" id="UAJ-EN-BAc"/>
+                        <outlet property="stayConnected" destination="EO3-5f-ioL" id="w08-Xz-kL6"/>
+                        <outlet property="studytips" destination="rCb-zF-RU9" id="hjI-3R-kzX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMB-MG-c9n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2335" y="-2329"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="s5q-TM-o2t">
+            <objects>
+                <viewController id="tIj-Gz-Avc" customClass="MessagesViewController" customModule="Health_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rYJ-Ef-vg0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TC5-97-Cc5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Notifications" id="umy-g4-YX5"/>
+                                </items>
+                            </navigationBar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="mb2-vq-hNl">
+                                <rect key="frame" x="20" y="215.33333333333334" width="347" height="2.6666666666666572"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <color key="progressTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8C6-85-jLD">
+                                <rect key="frame" x="0.0" y="262" width="375" height="467"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="467" id="IFu-mn-sGB"/>
+                                    <constraint firstAttribute="width" constant="375" id="qO4-JC-VcY"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Ezd-hG-K1T" customClass="Cell" customModule="Health_Tracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ezd-hG-K1T" id="G37-BT-dg5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Today's Progress" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a3B-eH-wh2">
+                                <rect key="frame" x="8" y="103" width="359" height="81.333333333333314"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TC5-97-Cc5" firstAttribute="centerX" secondItem="a3B-eH-wh2" secondAttribute="centerX" id="3dg-1d-wo3"/>
+                            <constraint firstItem="a3B-eH-wh2" firstAttribute="leading" secondItem="GKY-0v-B1Z" secondAttribute="leading" constant="8" id="4WR-tn-5Bh"/>
+                            <constraint firstItem="8C6-85-jLD" firstAttribute="trailing" secondItem="GKY-0v-B1Z" secondAttribute="trailing" id="7RX-c7-354"/>
+                            <constraint firstItem="mb2-vq-hNl" firstAttribute="leading" secondItem="rYJ-Ef-vg0" secondAttribute="leadingMargin" constant="4" id="88y-ac-jBr"/>
+                            <constraint firstItem="8C6-85-jLD" firstAttribute="bottom" secondItem="GKY-0v-B1Z" secondAttribute="bottom" id="99y-B2-caa"/>
+                            <constraint firstItem="TC5-97-Cc5" firstAttribute="leading" secondItem="GKY-0v-B1Z" secondAttribute="leading" id="E91-MK-QHB"/>
+                            <constraint firstItem="a3B-eH-wh2" firstAttribute="centerX" secondItem="rYJ-Ef-vg0" secondAttribute="centerX" id="N3A-DF-VT2"/>
+                            <constraint firstItem="8C6-85-jLD" firstAttribute="leading" secondItem="GKY-0v-B1Z" secondAttribute="leading" id="NAH-pH-ChO"/>
+                            <constraint firstItem="TC5-97-Cc5" firstAttribute="top" secondItem="GKY-0v-B1Z" secondAttribute="top" id="PWS-AG-Wpu"/>
+                            <constraint firstItem="8C6-85-jLD" firstAttribute="top" secondItem="mb2-vq-hNl" secondAttribute="bottom" constant="45" id="TOG-DU-qdI"/>
+                            <constraint firstItem="a3B-eH-wh2" firstAttribute="top" secondItem="TC5-97-Cc5" secondAttribute="bottom" constant="15" id="U6M-kF-Bgb"/>
+                            <constraint firstItem="a3B-eH-wh2" firstAttribute="trailing" secondItem="mb2-vq-hNl" secondAttribute="trailing" id="h7e-9c-QG8"/>
+                            <constraint firstItem="mb2-vq-hNl" firstAttribute="top" secondItem="a3B-eH-wh2" secondAttribute="bottom" constant="31" id="oRb-iV-qIZ"/>
+                            <constraint firstItem="8C6-85-jLD" firstAttribute="top" secondItem="mb2-vq-hNl" secondAttribute="bottom" constant="45" id="tV7-8f-S8b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GKY-0v-B1Z"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="message.fill" catalog="system" selectedImage="message.fill" id="JlB-r6-9nY">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="progressBar" destination="mb2-vq-hNl" id="Zwj-Pd-Vmg"/>
+                        <outlet property="reminders" destination="8C6-85-jLD" id="Epw-jc-9Bg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKt-R2-dRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2871.1999999999998" y="-1635.2216748768474"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="c5H-Fd-YoL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QM4-k0-Fgj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="aMs-m8-6TU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Gxw-WR-IPt" kind="relationship" relationship="viewControllers" id="qIx-u8-fcB"/>
+                        <segue destination="tIj-Gz-Avc" kind="relationship" relationship="viewControllers" id="bq5-5m-vUa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbM-Ju-YMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3651" y="-2296"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fitness.jpg" width="1296" height="1295"/>
+        <image name="food.jpg" width="999" height="998"/>
+        <image name="headphones.jpg" width="1267" height="1268"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="meditation.jpg" width="934" height="933"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="studytips.jpg" width="666" height="666"/>
+        <image name="zoom.jpeg" width="612" height="616"/>
+    </resources>
+</document>
